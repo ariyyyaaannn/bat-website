@@ -12,6 +12,9 @@ body {
     height: 60vh;
 }
 
+#hero{
+    overflow: clip;
+}
 #topbar {
     height: 80px;
     width: 100%;
@@ -25,6 +28,7 @@ body {
 #headlines {
     position: relative;
     top: 40px;
+    position: relative;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -35,13 +39,12 @@ body {
 
 #headlines div {
     text-align: center;
-    height: 200px;
+    height: fit-content;
     width: fit-content;
     flex: 0 0 auto;
     font-size: 2rem;
     font-weight: 800;
     color: rgb(44, 44, 44);
-
 }
 
 #headlines span {
@@ -50,10 +53,15 @@ font-weight: 800;
 color: #C22424;
 }
 
+#headlines div a{
+    text-decoration: none;
+}
+
+
 #services_wrapper   {
+    position: relative;
     top: 80px;
     height: fit-content;
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,22 +70,21 @@ color: #C22424;
 
 #services   {
     max-width: 1000px;
-    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: center;
     background-color: #D9D9D9;
     flex-wrap: wrap;
-    padding: 30px;
-    gap: 30px;
+    padding: 2.5vh;
+    gap: 2.5vh;
     border-radius: 50px;
     box-shadow: 5px 5px 12px 1px #c7c7c7;
 }
 
 .service  {
-    height: 20vh;
+    width: 80vw;
+    max-width: 500px;
     aspect-ratio: 2 / 1;
-    min-height: 150px;
     background-color: #F1F1F1;
     flex: 1 0 auto;
     border-radius: 25px;
@@ -90,3 +97,60 @@ color: #C22424;
     background-color: #c03e3e;
     border-radius: 25px;
 }
+
+@media screen and (min-width: 600px) {
+    .service_img    {
+        background-color: #4e3636;
+    }
+    .service  {
+        all: revert;
+        height: 25vh;
+        max-height: 230px;
+        aspect-ratio: 2 / 1;
+        min-height: 150px;
+        background-color: #F1F1F1;
+        flex: 1 0 auto;
+        border-radius: 25px;
+        box-shadow: 5px 5px 12px 1px #c7c7c7;
+}}
+
+#choose_us  {
+    width: 100%;
+    height: fit-content;
+    top: 120px;
+    position: relative;
+    overflow: clip;
+    background-color: #C22424;
+}
+
+#bottom-swirl   {
+    fill: linear-gradient(0deg, #ffffff 0%, #787878 100%);
+    z-index: -1;
+}
+
+#why-choose-us-container  {
+    height: 100%;
+    width: 100%;
+    z-index: 30;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#why-choose-us  {
+    width: 900px;
+    height: 600px;
+    background-color: #c03e3e;
+    border-radius: 50px;
+    margin: 5vw;
+}
+
+#previous-work  {
+    width: 100%;
+    height: 30%;
+    background-color: #fae8e8;
+}
+
