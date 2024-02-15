@@ -128,7 +128,7 @@ body {
 }
 
 #bottom-swirl {
-    fill: linear-gradient(0deg, #ffffff 0%, #787878 100%);
+    fill: linear-gradient(0deg, #f1f1f1 0%, #787878 100%);
     z-index: -1;
 }
 
@@ -146,7 +146,7 @@ body {
 #why-choose-us {
     width: 900px;
     height: 700px;
-    background-color: #D9D9D9;
+    background-color: #f1f1f1;
     border-radius: 50px;
     box-shadow: 5px 5px 12px 1px #6b6b6b50;
     margin: 5vw;
@@ -329,20 +329,52 @@ body {
 
 #previous-work-title {
     position: relative;
-    top: -40px;
+    top: -30px;
     margin: auto;
     width: 80vw;
     max-width: 320px;
     background-color: #B1B1B1;
-    height: 80px;
+    height: 60px;
     border-radius: 20px;
     box-shadow: 5px 5px 12px 1px #6b6b6b50;
+    z-index: 1;
 
 }
 
+#previous-work-pics {
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 50px;
+    overflow: clip;
+}
+
+.previous-pics  {
+    border-radius: 25px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: 250px;
+    height: 300px;
+    background-color:#B1B1B1;
+    animation: scroll 60s linear infinite;
+    box-shadow: 5px 5px 12px 1px #6b6b6b50;
+}
+
+@keyframes scroll {
+    to{transform: translate(calc(-950% - 25px))}
+}
+
+.test   {
+    background-color: aquamarine !important;
+}
 #contact {
     position: relative;
-    top: 160px;
+    top: 120px;
     height: 600px;
     width: 100%;
     background-color: #F1F1F1;
